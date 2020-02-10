@@ -28,6 +28,16 @@
             <version>3.141.59</version>
             <scope>test</scope>
         </dependency>
+
+        <!--Testing bot dependency-->
+        <dependency>
+            <groupId>com.testingbot</groupId>
+            <artifactId>testingbotrest</artifactId>
+            <version>1.0.6</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--SauceLab bot dependency-->
         <dependency>
             <groupId>com.saucelabs</groupId>
             <artifactId>sauce_testng</artifactId>
