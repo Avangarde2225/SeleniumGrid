@@ -10,8 +10,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class TestingBot {
-    public static final String KEY = "968e4c07fb278e50883938d14fb859dc";
-    public static final String SECRET = "bf450390f6ef0279e5937a39cdf68be9";
+    public static final String KEY = "862ccb1aa89076a013539bf7fe23daa9";
+    public static final String SECRET = "4e0a6956d8aa15cdcc71d9594aab15e6";
     public static final String HUB_URL = "http://" + KEY + ":" + SECRET + "@hub.testingbot.com/wd/hub";
     private WebDriver driver;
 
