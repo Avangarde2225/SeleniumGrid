@@ -18,9 +18,10 @@ public class SimpleTest {
     public void setup(String browser) throws MalformedURLException {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setBrowserName(browser);
-        //cap.setPlatform(Platform.LINUX);  // desiredcapabilities
+        cap.setPlatform(Platform.LINUX);  // desiredcapabilities
+        cap.setCapability("name", "Webdriver demo test");
 
-        URL url = new URL("http://localhost:4444/wd/hub");
+        URL url = new URL("https://serman2225:a2e321bb-7aa6-4a21-ae08-adc0357a43b0@ondemand.us-west-1.saucelabs.com:443/wd/hub");
 
         driver = new RemoteWebDriver(url, cap);
 

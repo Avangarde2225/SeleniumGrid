@@ -20,7 +20,8 @@ public class SaurceLabs {
         cap.setBrowserName(browser);
         cap.setPlatform( Platform.MAC );
         cap.setCapability("name", "Web Driver demo Test");
-        URL url = new URL("https://daulet:f098ca38-48d4-4f88-9667-acd7336db9c4@ondemand.saucelabs.com:443/wd/hub");
+
+        URL url = new URL("https://serman2225:a2e321bb-7aa6-4a21-ae08-adc0357a43b0@ondemand.us-west-1.saucelabs.com:443/wd/hub");
 
         driver = new RemoteWebDriver(url, cap);
 
