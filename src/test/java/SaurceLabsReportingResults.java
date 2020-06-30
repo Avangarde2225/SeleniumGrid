@@ -14,12 +14,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SaurceLabsReportingResults {
-    public static final String USERNAME = "daulet";
-    public static final String KEY = "f098ca38-48d4-4f88-9667-acd7336db9c4";
+
+    public static final String USERNAME = "serman2225";
+    public static final String KEY = "a2e321bb-7aa6-4a21-ae08-adc0357a43b0";
     private WebDriver driver;
 
     @BeforeClass
     public void setup() throws MalformedURLException {
+
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setBrowserName("safari");
         cap.setPlatform( Platform.MAC );
