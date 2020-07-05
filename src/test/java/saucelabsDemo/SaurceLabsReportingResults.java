@@ -1,3 +1,6 @@
+package saucelabsDemo;
+
+import com.saucelabs.saucerest.SauceREST;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -9,20 +12,23 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
-public class SaurceLabs {
+public class SaurceLabsReportingResults {
+
+    public static final String USERNAME = "serman2225";
+    public static final String KEY = "a2e321bb-7aa6-4a21-ae08-adc0357a43b0";
     private WebDriver driver;
 
-    @Parameters({"browser"})
     @BeforeClass
-    public void setup(String browser) throws MalformedURLException {
+    public void setup() throws MalformedURLException {
+
         DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setBrowserName(browser);
+        cap.setBrowserName("safari");
         cap.setPlatform( Platform.MAC );
         cap.setCapability("name", "Web Driver demo Test");
-
-        URL url = new URL("https://serman2225:a2e321bb-7aa6-4a21-ae08-adc0357a43b0@ondemand.us-west-1.saucelabs.com:443/wd/hub");
-
+        URL url = new URL( "https://" + USERNAME + ":" + KEY + "@ondemand.saucelabs.com:443/wd/hub" );
         driver = new RemoteWebDriver(url, cap);
 
     }
@@ -30,7 +36,12 @@ public class SaurceLabs {
     @Test
     public void test() {
         driver.get("https://google.com");
-        driver.manage().window().maximize();
+
+        SauceREST client = new SauceREST(USERNAME, KEY);
+        Map<String, Object> updates = new HashMap<>();
+        updates.put("passed", true);
+        String sessionId = ((RemoteWebDriver) driver).getSessionId().toString();
+        client.updateJobInfo(sessionId, updates);
 
     }
 

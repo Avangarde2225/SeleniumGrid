@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="username" value="admin"/>
+    <parameter name="password" value="F4pj8Zsq52mX!"/>
+
+    <test name="MultiBrowserTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="saucelabsDemo.sauceLabsBasqarTest"/>
+        </classes>
+    </test>
+
+</suite>

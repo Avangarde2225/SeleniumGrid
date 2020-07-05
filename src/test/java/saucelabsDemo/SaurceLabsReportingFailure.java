@@ -1,3 +1,5 @@
+package saucelabsDemo;
+
 import com.saucelabs.saucerest.SauceREST;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
